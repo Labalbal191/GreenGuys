@@ -9,7 +9,7 @@ namespace GreenGuys.Data.Intefaces
     interface IPlantRepository
     {
         IEnumerable<Plant> Plants { get;}
-        IEnumerable<Plant> PrefferedPlants { get;}
+        IEnumerable<Plant> MostPopularPlant { get;}
         Plant GetPlantById(int plantId);
     }
 }

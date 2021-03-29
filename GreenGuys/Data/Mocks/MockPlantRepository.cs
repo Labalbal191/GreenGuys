@@ -68,7 +68,7 @@ namespace GreenGuys.Data.Mocks
                 };
             }
         }
-        public IEnumerable<Plant> PrefferedPlants { get; }
+        public IEnumerable<Plant> MostPopularPlant { get; }
 
         public Plant GetPlantById(int plantId)
         {
