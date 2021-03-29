@@ -20,28 +20,16 @@ namespace GreenGuys
         {
             services.AddTransient<IPlantRepository, MockPlantRepository>();
             services.AddTransient<ICategoryRepository, MockCategoryRepository>();
-            services.AddMvc();
+            services.AddMvc(options => options.EnableEndpointRouting=false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //app.UseDeveloperExceptionPage();
+            app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
-            //app.UseStaticFiles();
-            //app.UseMvcWithDefaultRoute();
-
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
             app.UseStaticFiles();
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

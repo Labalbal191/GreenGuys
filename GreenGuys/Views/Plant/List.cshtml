@@ -1,0 +1,17 @@
+﻿@using GreenGuys.Data.Models
+@model IEnumerable<Plant>
+
+<div>
+    <h2>All our plants:</h2>
+</div>
+
+@{ 
+    foreach(var plant in Model)
+    {
+        <div>
+            <h4>Plant name: @plant.Name</h4>
+            <p>Price: @plant.Price.ToString("c")</p>
+        </div>
+    }
+}
+

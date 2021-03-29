@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GreenGuys.Data.Intefaces
 {
-    interface IPlantRepository
+    public interface IPlantRepository
     {
         IEnumerable<Plant> Plants { get;}
         IEnumerable<Plant> MostPopularPlant { get;}
