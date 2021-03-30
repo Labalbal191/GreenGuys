@@ -58,7 +58,7 @@ namespace GreenGuys.Data.Mocks
                         ShortDescription = "The dionaea muscipula is unusual in the way that it traps insects and ingests them",
                         LongDescription = "It's the most commonly kept insectivore indoors, although it's quite hard to extend their life span to the level they live up to outdoors.",
                         Category = _categoryRepository.Categories.Last(),
-               ImageURL = "https://www.houseplantsexpert.com/image-files/rose-of-china-flower.jpg",
+                        ImageURL = "https://www.houseplantsexpert.com/image-files/rose-of-china-flower.jpg",
                         ImageThumbnailURL = "https://www.houseplantsexpert.com/image-files/rose-of-china-flower.jpg",
                         InStock = true,
                         IsMostPopular = false,
