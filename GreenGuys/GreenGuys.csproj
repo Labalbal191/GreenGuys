@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.6.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
@@ -13,9 +14,8 @@
   <ItemGroup>
     <Folder Include="Components\" />
     <Folder Include="Migrations\" />
-    <Folder Include="wwwroot\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="TagHelpers\" />
+    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
 </Project>

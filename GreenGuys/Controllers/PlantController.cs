@@ -1,5 +1,6 @@
 ﻿using GreenGuys.Data.Intefaces;
 using GreenGuys.Data.Mocks;
+using GreenGuys.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -21,8 +22,12 @@ namespace GreenGuys.Controllers
 
         public ViewResult List()
         {
-            var plants = _plantRepository.Plants;   
-            return View(plants);
+            ViewBag.Name = "Test message";
+            var viewModel = new PlantListViewModel();
+            viewModel.Plants = _plantRepository.Plants;
+            viewModel.CurrentCategory = "Plant Category";
+
+            return View(viewModel);
         }
     }
 }

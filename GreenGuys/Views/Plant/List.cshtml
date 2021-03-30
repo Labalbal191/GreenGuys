@@ -1,16 +1,23 @@
-﻿@using GreenGuys.Data.Models
-@model IEnumerable<Plant>
-
-<div>
+﻿<div>
     <h2>All our plants:</h2>
 </div>
 
+<h2>@Model.CurrentCategory </h2>
 @{ 
-    foreach(var plant in Model)
+    foreach(var plant in Model.Plants)
     {
-        <div>
-            <h4>Plant name: @plant.Name</h4>
-            <p>Price: @plant.Price.ToString("c")</p>
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="@plant.ImageThumbnailURL" alt="" />
+                <div class="caption">
+                    <h3 class="pull-right">@plant.Price.ToString("c")</h3>
+                    <h3>
+                        <a>@plant.Name</a>
+                    </h3>
+
+                </div>
+            </div>
+            
         </div>
     }
 }
